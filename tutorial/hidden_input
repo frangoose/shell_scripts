@@ -1,0 +1,9 @@
+#!/bin/bash
+
+read -sp "Enter password : " passwd
+
+if [ $passwd == "password" ]; then
+    echo "Correct password"
+else
+    echo "Incorrect password"
+fi

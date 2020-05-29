@@ -1,0 +1,29 @@
+#!/bin/bash
+
+read -p "Enter 2 numbers to Sum : " num1 num2
+
+sum=$((num1+num2))
+
+echo "$num1 + $num2 = $sum"
+
+OIFS="$IFS" #Original IFS value
+IFS=","
+
+read -p "Enter 2 numbers to add (Separate by comma ',')" num1 num2
+
+num1=${num1//[[:blank:]]/} # replace blanks with no text (parameter expansion
+num2=${num2//[[:blank:]]/} # replace blanks with no text (parameter expansion
+
+sum=$((num1+num2))
+
+echo "$num1 + $num2 = $sum"
+
+IFS="$OIFS"
+
+name="Nick"
+echo "${name}'s" # Use variable expansion to make name possessive
+
+sample_string="The dog climbed the tree"
+echo "${sample_string//dog/cat}" # use variable expansion to change dog to cat in the sample string
+
+echo "I am ${name:=Nick}" # change value of name to Nick

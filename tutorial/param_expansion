@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rand_str="A random String"
+
+echo "String Length : ${#rand_str}"
+echo "${rand_str:2}" # slice first 2 chars
+echo "${rand_str:2:7}" # slice chars 2 through 7
+echo "${rand_str#*A }" # echo chars that follow after "A "

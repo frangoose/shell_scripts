@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while read avg rbis homeruns; do
+    printf "Avg: ${avg}\nRBIs: ${rbis}\nHRs: ${homeruns}\n"
+
+done < barry_bonds.txt
+
